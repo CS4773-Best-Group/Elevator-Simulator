@@ -8,6 +8,6 @@ public interface Mediator {
     void registerDoor(Door door);
     void start();
     void moveFloors();
-    void atNewFloor();
+    boolean atNewFloor();
     void stop();
 }

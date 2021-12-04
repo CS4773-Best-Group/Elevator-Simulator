@@ -23,18 +23,18 @@ public class ConcreteMediator implements Mediator {
 
     @Override
     public void start() {
-        // TODO: reset movedFloors and ensure door is closed
-
+        movedFloors = false;
+        // TODO: close the door if necessary
     }
 
     @Override
     public void moveFloors() {
-        // TODO: set movedFloors to true
+        movedFloors = true;
     }
 
     @Override
-    public void atNewFloor() {
-        // TODO: return if we moved floors since start
+    public boolean atNewFloor() {
+        return movedFloors;
     }
 
     @Override
