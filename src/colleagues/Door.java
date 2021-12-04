@@ -19,14 +19,14 @@ public class Door implements Colleague {
     public void closeDoor() {
         if (doorOpen) {
             doorOpen = false;
-            System.out.println("Doors are open");
+            System.out.println("Doors are closed");
         }
     }
 
     public void openDoor() {
         if (mediator.atNewFloor()) {
             doorOpen = true;
-            System.out.println("Doors are closed");
+            System.out.println("Doors are open");
         }
     }
 }
