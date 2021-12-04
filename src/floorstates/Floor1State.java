@@ -1,18 +1,26 @@
 package floorstates;
 
+import colleagues.Elevator;
+
 public class Floor1State implements FloorState {
+    Elevator elevator;
+
+    public Floor1State(Elevator elevator) {
+        this.elevator = elevator;
+    }
+
     @Override
     public void press1() {
-        // TODO: implement
+        // TODO: Do nothing
     }
 
     @Override
     public void press2() {
-        // TODO: implement
+        elevator.getMediator().moveFloors();
     }
 
     @Override
     public void press3() {
-        // TODO: implement
+        elevator.getMediator().moveFloors();
     }
 }

@@ -16,9 +16,9 @@ public class Elevator implements Colleague{
     FloorState floorState;
 
     public Elevator() {
-        floor1State = new Floor1State();
-        floor2State = new Floor2State();
-        floor3State = new Floor3State();
+        floor1State = new Floor1State(this);
+        floor2State = new Floor2State(this);
+        floor3State = new Floor3State(this);
 
         floorState = floor1State;
     }
@@ -37,14 +37,20 @@ public class Elevator implements Colleague{
     }
 
     public void press1() {
+        mediator.start();
         floorState.press1();
+        mediator.stop();
     }
 
     public void press2() {
+        mediator.start();
         floorState.press2();
+        mediator.stop();
     }
 
     public void press3() {
+        mediator.start();
         floorState.press3();
+        mediator.stop();
     }
 }
