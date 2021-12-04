@@ -1,5 +1,7 @@
 package colleagues;
 
-public interface Colleague
-{
+import mediator.Mediator;
+
+public interface Colleague {
+    void setMediator(Mediator mediator);
 }
