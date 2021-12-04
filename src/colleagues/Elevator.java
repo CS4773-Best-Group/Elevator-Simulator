@@ -23,19 +23,6 @@ public class Elevator implements Colleague{
         floorState = floor1State;
     }
 
-    @Override
-    public void setMediator(Mediator mediator) {
-        this.mediator = mediator;
-    }
-
-    public Mediator getMediator() {
-        return mediator;
-    }
-
-    public void setFloorState(FloorState floorState) {
-        this.floorState = floorState;
-    }
-
     public void press1() {
         mediator.start();
         floorState.press1();
@@ -52,5 +39,30 @@ public class Elevator implements Colleague{
         mediator.start();
         floorState.press3();
         mediator.stop();
+    }
+
+    @Override
+    public void setMediator(Mediator mediator) {
+        this.mediator = mediator;
+    }
+
+    public Mediator getMediator() {
+        return mediator;
+    }
+
+    public void setFloorState(FloorState floorState) {
+        this.floorState = floorState;
+    }
+
+    public FloorState getFloor1State() {
+        return floor1State;
+    }
+
+    public FloorState getFloor2State() {
+        return floor2State;
+    }
+
+    public FloorState getFloor3State() {
+        return floor3State;
     }
 }
