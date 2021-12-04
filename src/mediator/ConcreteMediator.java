@@ -24,7 +24,7 @@ public class ConcreteMediator implements Mediator {
     @Override
     public void start() {
         movedFloors = false;
-        // TODO: close the door if necessary
+        door.closeDoor();
     }
 
     @Override
@@ -39,6 +39,6 @@ public class ConcreteMediator implements Mediator {
 
     @Override
     public void stop() {
-        // TODO: try to open the door
+        door.openDoor();
     }
 }

@@ -24,18 +24,21 @@ public class Elevator implements Colleague{
     }
 
     public void press1() {
+        System.out.println("1 pressed");
         mediator.start();
         floorState.press1();
         mediator.stop();
     }
 
     public void press2() {
+        System.out.println("2 pressed");
         mediator.start();
         floorState.press2();
         mediator.stop();
     }
 
     public void press3() {
+        System.out.println("3 pressed");
         mediator.start();
         floorState.press3();
         mediator.stop();
