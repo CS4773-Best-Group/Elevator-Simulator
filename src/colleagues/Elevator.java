@@ -28,6 +28,10 @@ public class Elevator implements Colleague{
         this.mediator = mediator;
     }
 
+    public Mediator getMediator() {
+        return mediator;
+    }
+
     public void setFloorState(FloorState floorState) {
         this.floorState = floorState;
     }
