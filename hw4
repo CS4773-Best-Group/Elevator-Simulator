@@ -1,0 +1,2 @@
+#!/bin/bash
+java -cp hw4.jar:classes main.Main
