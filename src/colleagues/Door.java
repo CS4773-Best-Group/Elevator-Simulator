@@ -17,12 +17,16 @@ public class Door implements Colleague {
     }
 
     public void closeDoor() {
-        if (doorOpen)
+        if (doorOpen) {
             doorOpen = false;
+            System.out.println("Doors are open");
+        }
     }
 
     public void openDoor() {
-        if (mediator.atNewFloor())
+        if (mediator.atNewFloor()) {
             doorOpen = true;
+            System.out.println("Doors are closed");
+        }
     }
 }
