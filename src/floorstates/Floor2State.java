@@ -12,6 +12,7 @@ public class Floor2State implements FloorState {
     @Override
     public void press1() {
         elevator.getMediator().moveFloors();
+        elevator.setFloorState(elevator.getFloor1State());
     }
 
     @Override
@@ -22,5 +23,6 @@ public class Floor2State implements FloorState {
     @Override
     public void press3() {
         elevator.getMediator().moveFloors();
+        elevator.setFloorState(elevator.getFloor3State());
     }
 }
