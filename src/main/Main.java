@@ -6,7 +6,6 @@ import mediator.ConcreteMediator;
 import mediator.Mediator;
 
 public class Main {
-
     public static void main(String[] args) {
         Elevator elevator = new Elevator();
         Door door = new Door();

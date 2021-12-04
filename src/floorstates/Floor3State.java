@@ -14,7 +14,7 @@ public class Floor3State implements FloorState {
         System.out.println("Going down...");
         elevator.getMediator().moveFloors();
         elevator.setFloorState(elevator.getFloor1State());
-        System.out.println("*ding* the elevator arrives at Floor 1");
+        System.out.println("*ding* The elevator arrives at Floor 1");
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Floor3State implements FloorState {
         System.out.println("Going down...");
         elevator.getMediator().moveFloors();
         elevator.setFloorState(elevator.getFloor2State());
-        System.out.println("*ding* the elevator arrives at Floor 2");
+        System.out.println("*ding* The elevator arrives at Floor 2");
     }
 
     @Override
