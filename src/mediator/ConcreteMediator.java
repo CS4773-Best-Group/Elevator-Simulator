@@ -1,35 +1,44 @@
 package mediator;
 
-public class ConcreteMediator implements Mediator {
+import colleagues.Door;
+import colleagues.Elevator;
 
+public class ConcreteMediator implements Mediator {
+    Elevator elevator;
+    Door door;
+
+    boolean movedFloors;
 
     @Override
-    public void registerElevator() {
-        // TODO: register elevator to this mediator
+    public void registerElevator(Elevator elevator) {
+        elevator.setMediator(this);
+        this.elevator = elevator;
     }
 
     @Override
-    public void registerDoor() {
-        // TODO: register door to this mediator
+    public void registerDoor(Door door) {
+        door.setMediator(this);
+        this.door = door;
     }
 
     @Override
     public void start() {
-        // TODO: reset movedFloors and ensure door is closed
+        movedFloors = false;
+        door.closeDoor();
     }
 
     @Override
     public void moveFloors() {
-        // TODO: set movedFloors to true
+        movedFloors = true;
     }
 
     @Override
-    public void atNewFloor() {
-        // TODO: return if we moved floors since start
+    public boolean atNewFloor() {
+        return movedFloors;
     }
 
     @Override
     public void stop() {
-        // TODO: try to open the door
+        door.openDoor();
     }
 }
